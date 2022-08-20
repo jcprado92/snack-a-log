@@ -6,7 +6,13 @@ function HeartHealth({ snackHealth }) {
 
 
     <>
-    
+      <h2>
+          {" "}
+          { snackHealth
+            ? "This Snack is Healthy!"
+            : "This Snack is Unhealthy!" }
+          {" "}
+        </h2>
       {snackHealth 
           ? <span> <img src={heartSolid}></img> </span> 
           : <span> <img src={heartOutline}></img> </span>}
