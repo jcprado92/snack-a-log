@@ -1,12 +1,12 @@
-import React from 'react'
-import Snacks from '../Components/Snacks'
+import React from "react";
+import Snacks from "../Components/Snacks";
 
 function Index() {
   return (
     <div>
-        <Snacks />
+      <Snacks />
     </div>
-  )
+  );
 }
 
-export default Index
+export default Index;

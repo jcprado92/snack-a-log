@@ -1,11 +1,14 @@
-import React from 'react'
-import Snack from '../Components/Snack'
+import React from "react";
+// import Snack from "../Components/Snack";
+import SnackDetails from "../Components/SnackDetails";
+
 function Show() {
   return (
     <div>
-        <Snack />
+      <h1>Snacks</h1>
+      <SnackDetails />
     </div>
-  )
+  );
 }
 
-export default Show
+export default Show;

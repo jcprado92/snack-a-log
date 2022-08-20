@@ -1,25 +1,31 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Snack from "../Components/Snack";
 
-import React, { useState, useEffect } from 'react'
-import axios from "axios"
-import Snack from '../Components/Snack'
+const API = process.env.REACT_APP_API_URL;
 
-const API = process.env.REACT_APP_API_URL
 function Snacks() {
-    const [snax, setSnax ] = useState([])
-    
-    useEffect(() => {
-        axios.get(`${API}/snacks`)
-        .then(res => {
-            setSnax(res.data)
-            console.log(snax)
-        })
-        .catch(err => console.error(err))
-    }, [])
+  const [snacks, setSnacks] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${API}/snacks`)
+      .then((res) => {
+        setSnacks(res.data.payload);
+        // console.log(snacks);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+  
   return (
     <div>
-        <section>{snax.map(snack => <Snack key={snack.id} snack={snack}/>)}</section>
+      <section>
+        {snacks.map((snack) => (
+          <Snack key={snack.id} snack={snack} />
+        ))}
+      </section>
     </div>
-  )
+  );
 }
 
-export default Snacks
+export default Snacks;

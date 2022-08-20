@@ -1,12 +1,12 @@
-import React from 'react'
-import EditSnack from '../Components/EditSnack'
+import React from "react";
+import EditSnack from "../Components/EditSnack";
 
 function Edit() {
   return (
     <div>
-        <EditSnack />
+      <EditSnack />
     </div>
-  )
+  );
 }
 
-export default Edit
+export default Edit;

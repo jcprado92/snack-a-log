@@ -1,12 +1,12 @@
-import React from 'react'
-import NewSnack from '../Components/NewSnack'
+import React from "react";
+import NewSnack from "../Components/NewSnack";
 
 function New() {
   return (
     <div>
-        <NewSnack />
+      <NewSnack />
     </div>
-  )
+  );
 }
 
-export default New
+export default New;
