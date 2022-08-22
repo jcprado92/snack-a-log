@@ -61,8 +61,14 @@ snacks.post("/", async (req, res) => {
 
 // Update
 snacks.put("/:id", async (req, res) => {
+  
   const { id } = req.params;
-  const updatedSnack = await updateSnack(req.body, id);
+  const { body } = req
+
+  body.name - checkName(body)
+  body.is_healthy = confirmHealth(body)
+
+  const updatedSnack = await updateSnack(body, id);
   if (updatedSnack.id) {
     res.status(200).json(updatedSnack);
   } else {

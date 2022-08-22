@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <div>
-      <Link to="/">Gulp</Link>
-      <Link to="/snacks/new">New Snack</Link>
+    <div className="Nav">
+      <Link to="/" className="title">Good Gulps</Link>
+      <Link to="/snacks/new"><button>New Snack</button></Link>
     </div>
   );
 }

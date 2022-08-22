@@ -6,7 +6,7 @@ import Show from "./Pages/Show";
 import Nav from "./Components/Nav";
 import Home from "./Pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import "./styles/stylin.css"
 function App() {
   return (
     <Router>

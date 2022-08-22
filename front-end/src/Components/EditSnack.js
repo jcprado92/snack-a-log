@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, Link, useParams } from "react-router-dom";
-
+import "../styles/stylin.css"
 const API = process.env.REACT_APP_API_URL;
 
 function EditSnack() {
@@ -10,9 +10,9 @@ function EditSnack() {
 
   const [snack, setSnack] = useState({
    name: "",
-   fiber: 0,
-   protein: 0,
-   added_sugar: 0,
+   fiber: "",
+   protein: "",
+   added_sugar: "",
    is_healthy: false,
    image: "",
   });
@@ -54,8 +54,8 @@ function EditSnack() {
   };
 
   return (
-    <div className="Edit">
-      <form onSubmit={handleSubmit}>
+    <div className="edit">
+      <form onSubmit={handleSubmit} className="edit">
         <label htmlFor="name">Name:</label>
         <input
           id="name"
@@ -100,11 +100,11 @@ function EditSnack() {
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit" />
-      </form>
       <Link to={`/snacks/${id}`}>
         <button>Nevermind!</button>
       </Link>
+        <input type="submit" />
+      </form>
     </div>
   );
 }

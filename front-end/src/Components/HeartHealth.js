@@ -3,21 +3,15 @@ import heartOutline from "../assets/heart-regular.png";
 
 function HeartHealth({ snackHealth }) {
   return (
-
-
     <>
-      <h2>
-          {" "}
-          { snackHealth
-            ? "This Snack is Healthy!"
-            : "This Snack is Unhealthy!" }
-          {" "}
-        </h2>
-      {snackHealth 
-          ? <span> <img src={heartSolid}></img> </span> 
-          : <span> <img src={heartOutline}></img> </span>}
+     <h4><span><img height="50px" width="50px" src={ snackHealth ? heartSolid : heartOutline} alt={snackHealth ? "healthy food" : "unhealthy food"} /> </span>{snackHealth
+          ? "This Snack is Healthy!"
+          : "This Snack is Unhealthy!"}{" "}</h4>
+  <br/>
     </>
   );
 }
 
 export default HeartHealth;
+
+

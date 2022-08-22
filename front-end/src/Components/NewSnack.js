@@ -21,9 +21,9 @@ function NewSnack() {
 
   const [snack, setSnack] = useState({
    name: "",
-   fiber: 0,
-   protein: 0,
-   added_sugar: 0,
+   fiber: "",
+   protein: "",
+   added_sugar: "",
    is_healthy: false,
    image: "",
   });
@@ -45,8 +45,8 @@ function NewSnack() {
   };
   
   return (
-    <div className="New">
-      <form onSubmit={handleSubmit}>
+    <div className="new">
+      <form onSubmit={handleSubmit} className="new">
         <label htmlFor="name">Name:</label>
         <input
           id="name"
@@ -74,7 +74,7 @@ function NewSnack() {
           placeholder="Protein Count"
           onChange={handleNumberChange}
         />
-        <label htmlFor="added_sugar">added_sugar:</label>
+        <label htmlFor="added_sugar">Added Sugar</label>
         <input
           id="added_sugar"
           type="number"

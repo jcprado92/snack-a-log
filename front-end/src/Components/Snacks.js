@@ -18,8 +18,8 @@ function Snacks() {
   }, []);
   
   return (
-    <div>
-      <section>
+    <div >
+      <section className="snack-container">
         {snacks.map((snack) => (
           <Snack key={snack.id} snack={snack} />
         ))}
